@@ -1,16 +1,11 @@
 template(name="navbar")
-    // Pre Loader
-    #loader-wrapper
-        #loader
-        .loader-section.section-left
-        .loader-section.section-right
     // Navigation
     .navbar-fixed
         nav#nav_f.default_color(role='navigation')
             .container
                 .nav-wrapper
                     a#logo-container.brand-logo(href='#top') MD Template
-                    ul#nav-mobile.right.side-nav
+                    ul#nav-mobile.right.hide-on-med.side-nav
                         li
                             a(href='#intro') Service
                         li
