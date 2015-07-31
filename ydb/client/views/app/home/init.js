@@ -1,8 +1,7 @@
 (function($){
   $(function(){
 
-    $('.button-collapse').sideNav();
-	$('.scrollspy').scrollSpy();
+
 
     /*** Animate word ***/
 
@@ -157,8 +156,7 @@
 		$newWord.removeClass('is-hidden').addClass('is-visible');
 	}
 
-	$('.button-collapse').sideNav({menuWidth: 240, activationWidth: 70});
-	$('.parallax').parallax();
+
 
 	var card  = document.querySelectorAll('.card-work');
   	var transEndEventNames = {
@@ -166,7 +164,7 @@
 	      'MozTransition'    : 'transitionend',
 	      'transition'       : 'transitionend'
 	},
-	transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
+	transEndEventName = transEndEventNames['transition'];
 
 	function addDashes(name) {
 		return name.replace(/([A-Z])/g, function(str,m1){ return '-' + m1.toLowerCase(); });

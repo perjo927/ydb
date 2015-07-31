@@ -1,0 +1,25 @@
+template(name="navbar")
+    // Pre Loader
+    #loader-wrapper
+        #loader
+        .loader-section.section-left
+        .loader-section.section-right
+    // Navigation
+    .navbar-fixed
+        nav#nav_f.default_color(role='navigation')
+            .container
+                .nav-wrapper
+                    a#logo-container.brand-logo(href='#top') MD Template
+                    ul#nav-mobile.right.side-nav
+                        li
+                            a(href='#intro') Service
+                        li
+                            a(href='#work') Work
+                        li
+                            a(href='#team') Team
+                        li
+                            a(href='#contact') Contact
+                        li
+                            a(href='', target='_blank') Download
+                    a.button-collapse(href='#', data-activates='nav-mobile')
+                        i.mdi-navigation-menu
