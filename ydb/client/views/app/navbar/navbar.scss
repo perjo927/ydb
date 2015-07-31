@@ -13,19 +13,23 @@ nav ul a {
 }
 
 
-#nav_f{
-  box-shadow: none !important;
-  -webkit-box-shadow:none !important;
-}
-
 
 .brand-logo{
-  position: absolute;
-  color: #fff;
+  font-family: 'Cantarell', sans-serif;
   display: inline-block;
-  font-size: 2.1rem;
-  font-style: normal;
-  font-weight: 100;
-  padding: 0;
-  letter-spacing: 7px;
+  font-size: 1rem !important;
+  font-style: italic;
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+  .brand-logo{
+    font-size: 1.5rem !important;
+
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .brand-logo{
+    font-size: 2rem !important;
+    text-align: center;
+  }
 }
