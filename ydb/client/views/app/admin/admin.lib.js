@@ -1,15 +1,13 @@
 // TODO : Es6
 
-Footer = {};
+Admin = {};
 
 
-Footer.onValidationDone = function (isValid, errorMessage, formContainer) {
-    var successMessage = "Meddelandet har skickats.";
+Admin.onValidationDone = function (isValid, errorMessage, formContainer) {
+    var successMessage = "Du &auml;r inloggad.";
 
     var email = formContainer["email"],
-        message = formContainer["textmessage"],
-        subject = formContainer["fullname"] +
-            " har skickat dig ett meddelande via Yellow Dangers hemsida . ";
+        password = formContainer["password"];
 
     var callback = function(err, res) {
         if (!!err) {
@@ -21,7 +19,7 @@ Footer.onValidationDone = function (isValid, errorMessage, formContainer) {
     };
 
     if (isValid) {
-        Meteor.call('sendEmail', email, message, subject, callback);
+        Meteor.loginWithPassword(email, password, callback);
     } else {
         Materialize.toast(errorMessage, 5000, 'red');
     }

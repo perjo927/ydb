@@ -7,14 +7,16 @@ template(name="navbar")
                     a#logo-container.brand-logo.black-text(href='#top') YELLOW DANGER BREWERY
                     a.button-collapse(href='#', data-activates='nav-mobile')
                         i.mdi-navigation-menu
+
+                    if currentUser
+                        ul#sign-out
+                            li
+                                +account
+
                     ul#nav-mobile.side-nav
                         +nav_items_side
                     ul#nav-upper.hide-on-med-and-down.right
                         +nav_items
-                        if currentUser
-                            a(href="#")
-                                +account
-
 //
 template(name="nav_items")
     each navbar
@@ -34,5 +36,10 @@ template(name="nav_items_side")
 //
 template(name="account")
     ul#account-dropdown.dropdown-content
-        li.cantarell
+        li
             a#sign-out Logga ut
+
+    // Dropdown Trigger
+    li
+        a.dropdown-button(href='#!', data-activates='account-dropdown')
+            i.mdi-action-settings

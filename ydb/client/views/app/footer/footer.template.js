@@ -22,9 +22,9 @@ Template.footer.events({
 
         App.UI.validateForm(formFields, formContainer, function (isValid, error) {
             var errorMessage =
-                "Följande formulär hade felaktig data: "
+                "F&ouml;ljande formul&auml;r hade felaktig data: "
                 + error
-                + ". Var god försök igen.";
+                + ". Var god f&ouml;rs&ouml;k igen.";
 
             Footer.onValidationDone(isValid, errorMessage, formContainer);
         });

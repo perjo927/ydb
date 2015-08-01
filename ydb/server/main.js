@@ -14,6 +14,5 @@ var createAdminUser = function () {
 };
 
 Meteor.startup(function () {
-    //var emailAccount = ParseAssets("emailAccount");
-
+    createAdminUser();
 });
