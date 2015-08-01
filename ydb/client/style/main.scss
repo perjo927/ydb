@@ -1,10 +1,6 @@
 // TODO: SASS
 
 
-.icon-block {
-  padding: 0 15px;
-}
-
 .cantarell {
   font-family: 'Cantarell', sans-serif;
 }
@@ -13,33 +9,11 @@
 #work, #team{background: rgb(247, 247, 247);}
 
 
-.text_h2 {font-weight: 100;margin-bottom: 4%; line-height: 4.5rem;}
-
-
-.text_b{color: #2196F3;}
-
-.in{font-weight: 700 !important; font-style: italic !important;}
-
-
-
-
-.text_pink{color:#EF9A9A;}
-
-
-@media only screen and (max-width: 480px) {
-  .text_h {
-    padding: 4% 0;
-    font-size: 5em;
-    color: white;
-  }
+.text_h2 {
+  font-weight: 100;margin-bottom: 4%; line-height: 4rem;
 }
 
 input, textarea {
   border-bottom: 1px solid #fff;
-}
-
-
-.parallax-container {
-  max-height: 400px;
 }
 
