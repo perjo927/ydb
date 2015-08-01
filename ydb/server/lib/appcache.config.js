@@ -1,4 +1,5 @@
-// TODO:
+// TODO: Activate in prod
+
 Meteor.AppCache.config({
     chrome: false,
     firefox: false,
