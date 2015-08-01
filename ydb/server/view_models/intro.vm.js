@@ -1,3 +1,9 @@
+var introTitle = {
+    icon: "",
+    mdTitle: "Ett mikrobryggeri i __Norrk&ouml;ping__ med inriktning mot __&ouml;l__. Vi brygger, du dricker.",
+    creator: "Per"
+};
+
 var introText1 = {
     icon: "mdi-image-flash-on",
     mdText: "##### __R&auml;ttvist__" +
@@ -21,5 +27,5 @@ var introText3 = {
 };
 
 VM.sections["intro"] = [
-    introText1, introText2, introText3
+    introTitle,introText1, introText2, introText3
 ];

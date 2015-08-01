@@ -3,9 +3,11 @@ template(name="intro")
       .container
          .row
             .col.s12
-               h2.center.intro-text
-                  +markdown
-                     Ett mikrobryggeri i __Norrk&ouml;ping__ med inriktning mot __&ouml;l__. Vi brygger, du dricker.
+               each intro
+                  if mdTitle
+                     h2.center.intro-text
+                        +markdown
+                           #{mdTitle}
 
             ul.scrollfire.icons
                each intro
