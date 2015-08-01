@@ -1,7 +1,7 @@
 template(name="navbar")
     // Navigation
     .navbar-fixed
-        nav#nav_f.default_color(role='navigation')
+        nav#nav_f.amber(role='navigation')
             .container
                 .nav-wrapper
                     a#logo-container.brand-logo.black-text(href='#top') YELLOW DANGER BREWERY
@@ -17,13 +17,13 @@ template(name="navbar")
 
 //
 template(name="nav_items")
-    li
+    li.cantarell
         a(href='#intro') Om
-    li
+    li.cantarell
         a(href='#work') Produkter
-    li
+    li.cantarell
         a(href='#team') Team
-    li
+    li.cantarell
         a(href='#contact') Kontakt
 
 //
@@ -33,5 +33,5 @@ template(name="nav_items_side")
 //
 template(name="account")
     ul#account-dropdown.dropdown-content
-        li
+        li.cantarell
             a#sign-out Logga ut

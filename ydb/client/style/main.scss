@@ -1,54 +1,29 @@
-/* Custom Stylesheet */
-/**
- *
- * Made By Joash Pereira
- * Thanks for MaterializeCSS.com
- */
+// TODO: SASS
 
-/* TODO: SASS */
-
-.default_color{background-color: #febe29 !important}
-
-.default_color_text{color: #febe29 !important}
 
 .icon-block {
   padding: 0 15px;
 }
 
-#intro, #work, #team {padding-top: 4rem;}
-
-
-.text_h {
+.cantarell {
   font-family: 'Cantarell', sans-serif;
-  padding: 15% 0;
-  font-size: 5.0em;
-  font-style: italic;
 }
+
+#intro, #work, #team {padding-top: 4rem;}
+#work, #team{background: rgb(247, 247, 247);}
+
 
 .text_h2 {font-weight: 100;margin-bottom: 4%; line-height: 4.5rem;}
 
-.span_h2 {font-weight: 300;color: #febe29;}
 
 .text_b{color: #2196F3;}
 
 .in{font-weight: 700 !important; font-style: italic !important;}
 
-.promo i {
-  color: #2196F3;
-  font-size: 7rem;
-  display: block;
-}
-.card-content a {color: #2196F3;}
 
-.card-content a:hover {color: #2196F3;}
 
-#work, #team{background: rgb(247, 247, 247);}
 
 .text_pink{color:#EF9A9A;}
-
-
-
-
 
 
 @media only screen and (max-width: 480px) {
@@ -64,37 +39,7 @@ input, textarea {
 }
 
 
-.card-avatar .waves-effect {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.card-avatar img {
-  height: 150px;
-  width: 150px;
-  border-radius: 75px;
-}
-
-.card-avatar .card-content {
-  text-align: center;
-}
-
-.card .card-content p {
-  margin: 15px 0px;
-}
-
-.card-avatar .card-content i {
-  font-size: 1.5rem;
-}
-
-.card-avatar .card-content .card-title {
-  line-height: 30px !important;
-}
-
 .parallax-container {
   max-height: 400px;
 }
 
-footer.page-footer {
-  margin-top: 0px !important;
-}
