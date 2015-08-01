@@ -14,7 +14,15 @@ Meteor.methods({
             text:  message
             // headers : Object - dictionary of custom headers
         });
-
         return isEmailSent;
+    },
+    "loginWithPassword": function (user, password, callback) {
+        Meteor.loginWithPassword(user, password, function (error) {
+            if (!!error) {
+                callback("Error", error);
+            } else {
+                callback("Success");
+            }
+        });
     }
 });

@@ -47,3 +47,16 @@ Router.route('/', {
         });
     }
 });
+
+// TODO: Auth
+Router.route('/admin', {
+    name: "admin",
+    loadingTemplate: "loading",
+    layoutTemplate: "admin_app",
+    action: function(){
+        var router = this;
+        router.render('admin', {});
+    }
+});
+
+// TODO: 404, etc
