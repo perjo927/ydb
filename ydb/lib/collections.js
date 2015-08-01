@@ -8,8 +8,8 @@ Collections = {
 // Presentation collections to create
 ContentAreas =
     [
-        "intro"
-        //,
+        "intro",
+        "work"
     ];
 
 ContentAreas.forEach(function (area) {

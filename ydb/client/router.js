@@ -6,20 +6,22 @@ Router.route('/', {
     loadingTemplate: "loading",
     layoutTemplate: "app",
     waitOn: function() {
-        var hasParams = false;
+        var noParams = false;
         return CreateSubscriptions({
-            "intro": hasParams
+            "intro": noParams,
+            "work": noParams
         });
     },
     action: function(){
         var router = this;
         var intro = Collections.presentation["intro"].find();
-
+        var work = Collections.presentation["work"].find();
 
         router.render('home', {
             data: function () {
                 return {
-                    intro: intro
+                    intro: intro,
+                    work: work
                 }
             }
         });

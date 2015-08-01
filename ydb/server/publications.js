@@ -4,7 +4,7 @@ var checkUser = function (collection, userId) {
     check(userId, String);
 
     if (!!userId) {
-        return Collections.presentation[collection].find({roomId: roomId});
+        return Collections.presentation[collection].find();
     } else {
         return [];
     }
@@ -16,7 +16,9 @@ var checkUser = function (collection, userId) {
 Meteor.publish("intro", function () {
     return Collections.presentation["intro"].find();
 });
-
+Meteor.publish("work", function () {
+    return Collections.presentation["work"].find();
+});
 
 //
 //Meteor.publish("estimationsPerRoom", function (roomId) {
