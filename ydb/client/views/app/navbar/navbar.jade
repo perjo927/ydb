@@ -5,16 +5,33 @@ template(name="navbar")
             .container
                 .nav-wrapper
                     a#logo-container.brand-logo.black-text(href='#top') YELLOW DANGER BREWERY
-                    ul#nav-mobile.right.hide-on-med.side-nav
-                        li
-                            a(href='#intro') Service
-                        li
-                            a(href='#work') Work
-                        li
-                            a(href='#team') Team
-                        li
-                            a(href='#contact') Contact
-                        li
-                            a(href='', target='_blank') Download
                     a.button-collapse(href='#', data-activates='nav-mobile')
                         i.mdi-navigation-menu
+                    ul#nav-mobile.side-nav
+                        +nav_items_side
+                    ul#nav-upper.hide-on-med-and-down.right
+                        +nav_items
+                        if currentUser
+                            a(href="#")
+                                +account
+
+//
+template(name="nav_items")
+    li
+        a(href='#intro') Om
+    li
+        a(href='#work') Produkter
+    li
+        a(href='#team') Team
+    li
+        a(href='#contact') Kontakt
+
+//
+template(name="nav_items_side")
+    +nav_items
+
+//
+template(name="account")
+    ul#account-dropdown.dropdown-content
+        li
+            a#sign-out Logga ut

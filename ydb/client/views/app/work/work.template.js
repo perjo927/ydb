@@ -1,0 +1,5 @@
+Template.work.onRendered(function () {
+
+
+
+});
