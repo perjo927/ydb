@@ -1,16 +1,16 @@
-var fireSelector = ".scrollfire" + "." + "cards";
+var fireSelector = ".scrollfire" + "." + "persons";
 
 
-Template.work.scrollFireContent = function () {
+Template.team.scrollFireContent = function () {
     Materialize.showStaggeredList(fireSelector);
 };
 
-Template.work.onRendered(function () {
+Template.team.onRendered(function () {
     var scrollFireOptions = [
         {
             selector: fireSelector,
             offset: -1,
-            callback: "Template.work.scrollFireContent()"
+            callback: "Template.team.scrollFireContent()"
         }
     ];
     Materialize.scrollFire(scrollFireOptions);
