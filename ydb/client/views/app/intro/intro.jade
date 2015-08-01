@@ -3,33 +3,32 @@ template(name="intro")
       .container
          .row
             .col.s12
-               h2.center.header.text_h2
-                  | Ett mikrobryggeri i
-                  span.amber-text Norrk&ouml;ping
-                  | med inriktning mot
-                  span.amber-text  &ouml;l
-                  | . Ta sp&aring;rvagnen till n&auml;rmsta
-                  span.amber-text  systembolag.
+               h2.center.intro-text
+                  +markdown
+                     Ett mikrobryggeri i __Norrk&ouml;ping__ med inriktning mot __&ouml;l__. Vi brygger, du dricker.
 
             ul.scrollfire.icons
                li
                   .col.s12.m4.l4
-                     .center.promo.promo-example
+                     .center.promo.cantarell
                         i.mdi-image-flash-on.amber-text
-                        h5.promo-caption R&auml;ttvist
+                        h5
+                           b R&auml;ttvist
                         p.light.center
                            | Vi anv&auml;nder bara de b&auml;sta r&aring;varorna odlade av lokalbefolkning.
                li
                   .col.s12.m4.l4
-                     .center.promo.promo-example
+                     .center.promo.cantarell
                         i.mdi-action-favorite.amber-text
-                        h5.promo-caption Passion
+                        h5
+                           b Passion
                         p.light.center
                            | Vi brinner f&ouml;r &ouml;l
                li
                   .col.s12.m4.l4
-                     .center.promo.promo-example
+                     .center.promo.cantarell
                         i.mdi-maps-local-drink.amber-text
-                        h5.promo-caption Utbud
+                        h5
+                           b Utbud
                         p.light.center
                            | V&auml;lj bland 103 sorter.

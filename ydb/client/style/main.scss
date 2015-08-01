@@ -9,8 +9,17 @@
 #work, #team{background: rgb(247, 247, 247);}
 
 
-.text_h2 {
-  font-weight: 100;margin-bottom: 4%; line-height: 4rem;
+.intro-text {
+  font-weight: 100;
+  margin-bottom: 4%;
+  line-height: 4rem;
+  font-family: 'Cantarell', sans-serif !important;
+
+  strong {
+    font-weight: 100;
+    color: #ffc107;
+    font-family: 'Cantarell', sans-serif !important;
+  }
 }
 
 input, textarea {
