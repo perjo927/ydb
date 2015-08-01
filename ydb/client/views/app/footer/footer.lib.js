@@ -12,12 +12,10 @@ Footer.onValidationDone = function (isValid, errorMessage, formContainer) {
             " har skickat dig ett meddelande på Yellow Dangers hemsida . ";
 
     var callback = function(err, res) {
-        console.info(err, res); // TODO: remove
-
         if (!!err) {
-            Materialize.toast(errorMessage, 5000, 'pink');
+            Materialize.toast(errorMessage, 5000, 'red');
         } else {
-            Materialize.toast(successMessage, 5000, 'cyan');
+            Materialize.toast(successMessage, 5000, 'black');
             $('form').trigger("reset");
         }
     };
@@ -25,6 +23,6 @@ Footer.onValidationDone = function (isValid, errorMessage, formContainer) {
     if (isValid) {
         Meteor.call('sendEmail', email, message, subject, callback);
     } else {
-        Materialize.toast(errorMessage, 5000, 'pink');
+        Materialize.toast(errorMessage, 5000, 'red');
     }
 };

@@ -42,7 +42,7 @@ App.UI.validateForm = function (formFields, formContainer, callback) {
 
         var valid = fieldValidator.call(null, fieldValue);
         var field = $("#" + ff["name"]);
-        var validationClass = "pink lighten-3"; // TODO: fetch from theme (?)
+        var validationClass = "red lighten-3";
 
         if (!valid) {
             field.addClass(validationClass);
