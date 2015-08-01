@@ -1,5 +1,26 @@
+// TODO: Sass:a
+
 .promo i {
-  color: #2196F3;
   font-size: 7rem;
   display: block;
+}
+
+.intro-text {
+  font-weight: 100;
+  margin-bottom: 4%;
+  line-height: 4rem;
+  font-family: 'Cantarell', sans-serif !important;
+
+  strong {
+    font-weight: 100;
+    color: #ffc107;
+    font-family: 'Cantarell', sans-serif !important;
+  }
+}
+
+.icon-text-area {
+  font-family: 'Cantarell', sans-serif !important;
+    strong {
+      font-family: 'Cantarell', sans-serif !important;
+    }
 }

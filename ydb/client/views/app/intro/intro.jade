@@ -8,27 +8,11 @@ template(name="intro")
                      Ett mikrobryggeri i __Norrk&ouml;ping__ med inriktning mot __&ouml;l__. Vi brygger, du dricker.
 
             ul.scrollfire.icons
-               li
-                  .col.s12.m4.l4
-                     .center.promo.cantarell
-                        i.mdi-image-flash-on.amber-text
-                        h5
-                           b R&auml;ttvist
-                        p.light.center
-                           | Vi anv&auml;nder bara de b&auml;sta r&aring;varorna odlade av lokalbefolkning.
-               li
-                  .col.s12.m4.l4
-                     .center.promo.cantarell
-                        i.mdi-action-favorite.amber-text
-                        h5
-                           b Passion
-                        p.light.center
-                           | Vi brinner f&ouml;r &ouml;l
-               li
-                  .col.s12.m4.l4
-                     .center.promo.cantarell
-                        i.mdi-maps-local-drink.amber-text
-                        h5
-                           b Utbud
-                        p.light.center
-                           | V&auml;lj bland 103 sorter.
+               each intro
+                  li
+                     .col.s12.m4.l4
+                        .center.promo.cantarell
+                           i.amber-text(class="#{icon}")
+                           .icon-text-area(id="#{_id}")
+                              +markdown
+                                 #{mdText}

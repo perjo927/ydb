@@ -1,5 +1,4 @@
 
-
 VM = {
     "sections": {}
 };
