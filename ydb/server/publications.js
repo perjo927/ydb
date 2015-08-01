@@ -11,7 +11,6 @@ var checkUser = function (collection, userId) {
 };
 
 
-
 /* TODO: refactor, forEach */
 Meteor.publish("intro", function () {
     return Collections.presentation["intro"].find();
@@ -21,6 +20,9 @@ Meteor.publish("work", function () {
 });
 Meteor.publish("team", function () {
     return Collections.presentation["team"].find();
+});
+Meteor.publish("navbar", function () {
+    return Collections.presentation["navbar"].find();
 });
 //
 //Meteor.publish("estimationsPerRoom", function (roomId) {

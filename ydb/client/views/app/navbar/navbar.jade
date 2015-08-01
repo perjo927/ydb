@@ -17,14 +17,15 @@ template(name="navbar")
 
 //
 template(name="nav_items")
-    li.cantarell
-        a(href='#intro') OM
-    li.cantarell
-        a(href='#work') PRODUKTER
-    li.cantarell
-        a(href='#team') TEAM
-    li.cantarell
-        a(href='#contact') KONTAKT
+    each navbar
+        li.cantarell
+            a(href='##{intro.link}' class="#{intro._id}")= intro.text
+        li.cantarell
+            a(href='##{work.link}' class="#{work._id}")= work.text
+        li.cantarell
+            a(href='##{team.link}' class="#{team._id}")= team.text
+        li.cantarell
+            a(href='##{contact.link}' class="#{contact._id}")= contact.text
 
 //
 template(name="nav_items_side")

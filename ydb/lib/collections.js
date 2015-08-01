@@ -10,7 +10,8 @@ ContentAreas =
     [
         "intro",
         "work",
-        "team"
+        "team",
+        "navbar"
     ];
 
 ContentAreas.forEach(function (area) {

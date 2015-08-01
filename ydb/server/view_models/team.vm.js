@@ -29,8 +29,6 @@ var person4 = {
 };
 
 
-
-
 VM.sections["team"] = [
     teamTitle, person1, person2, person3, person4
 ];
