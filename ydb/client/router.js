@@ -7,21 +7,27 @@ Router.route('/', {
     layoutTemplate: "app",
     waitOn: function() {
         var noParams = false;
+        // TODO: refactor
         return CreateSubscriptions({
             "intro": noParams,
-            "work": noParams
+            "work": noParams,
+            "team": noParams
         });
     },
     action: function(){
         var router = this;
+        // TODO: refactor
         var intro = Collections.presentation["intro"].find();
         var work = Collections.presentation["work"].find();
+        var team = Collections.presentation["team"].find();
 
         router.render('home', {
             data: function () {
+                // TODO: refactor
                 return {
                     intro: intro,
-                    work: work
+                    work: work,
+                    team: team
                 }
             }
         });

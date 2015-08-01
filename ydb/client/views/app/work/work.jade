@@ -5,14 +5,15 @@ template(name="work")
                 b
                     each work
                         if workTitle
-                            i= workTitle
+                            i
+                                | {{{ workTitle }}}
             .row
                 ul.scrollfire.cards.cantarell
                     each work
                         if title
                             li
                                 .col.s12.m4.l4
-                                    .card
+                                    .card(id="#{id}")
                                         .card-image.waves-effect.waves-block.waves-light.img-product
                                             img.activator(src='#{img}')
                                         .card-content

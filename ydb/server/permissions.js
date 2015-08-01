@@ -49,6 +49,7 @@ var creatorAccess = function (fetch, insertRestriction, updateRestriction, remov
 // TODO: Use admin
 Collections.presentation["intro"].allow(access(true, true, true));
 Collections.presentation["work"].allow(access(true, true, true));
+Collections.presentation["team"].allow(access(true, true, true));
 
 //Collections.presentation["intro"].allow(creatorAccess(['creator']));
 

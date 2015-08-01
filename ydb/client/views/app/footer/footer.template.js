@@ -7,7 +7,7 @@ Template.footer.events({
 
         // TODO: Email.send(), assets
 
-
+        var errorMessage = "Email hasn't been sent successfully.";
         var successMessage = "Email has been sent successfully.";
 
         var email = "email",
@@ -24,7 +24,6 @@ Template.footer.events({
 
             }
         };
-
         Meteor.call('sendEmail', email, message, subject, callback);
     }
 });

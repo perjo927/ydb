@@ -9,7 +9,8 @@ Collections = {
 ContentAreas =
     [
         "intro",
-        "work"
+        "work",
+        "team"
     ];
 
 ContentAreas.forEach(function (area) {
