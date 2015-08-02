@@ -1,9 +1,10 @@
+var ac = App.collections;
 
-for (var collection in Collections["presentation"]) {
-    if (Collections["presentation"].hasOwnProperty(collection)) {
+for (var collection in ac) {
+    if (ac.hasOwnProperty(collection)) {
         var viewModel = VM.sections[collection];
         if (!!viewModel) {
-            var c = Collections.presentation[collection];
+            var c = ac[collection];
 
             if (c.find().count() === 0) {
                 viewModel.forEach(function (element, index, array) {

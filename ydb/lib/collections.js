@@ -1,30 +1,15 @@
 // Runs in both client and server contexts
 
-//App
 
-Collections = {
-    "presentation": {},
-    "server": {}
-};
-
-// Presentation collections to create
-ContentAreas =
-    [
-        "intro",
-        "work",
-        "team",
-        "navbar"
-    ];
 
 ContentAreas.forEach(function (area) {
-    Collections.presentation[area] = new Mongo.Collection(area);
+    App.collections[area] = new Mongo.Collection(area);
 });
 
+console.log(App.collections);
+
 /* LIB */
-
-
-/* *** */
-AppLib.Collection.insert = function (collection, document, callback) {
+App.Collection.insert = function (collection, document, callback) {
     collection.insert(document, function (error, id) {
         if (!!error) {
             //console.error(error);
@@ -38,7 +23,7 @@ AppLib.Collection.insert = function (collection, document, callback) {
 };
 
 //
-AppLib.Collection.update = function (collection, id, modifier, callback) {
+App.Collection.update = function (collection, id, modifier, callback) {
     collection.update(id, modifier, function (error, id) {
         if (!!error) {
             //console.error("Features update", error);
@@ -51,7 +36,7 @@ AppLib.Collection.update = function (collection, id, modifier, callback) {
     });
 };
 
-AppLib.Collection.remove = function (collection,_id, callback) {
+App.Collection.remove = function (collection,_id, callback) {
     collection.remove(_id, function (error) {
         if(!!error) {
             //console.error(error);
@@ -64,14 +49,14 @@ AppLib.Collection.remove = function (collection,_id, callback) {
     });
 };
 
-AppLib.Collection.findOne = function (collection, query) {
+App.Collection.findOne = function (collection, query) {
     if (!query) {
         return collection.findOne();
     }
     return collection.findOne(query);
 };
 
-AppLib.Collection.find = function (collection, query) {
+App.Collection.find = function (collection, query) {
     if (!query) {
         return collection.find();
     }

@@ -17,7 +17,7 @@ Router.route('/', {
     },
     action: function(){
         var router = this;
-        var c = Collections.presentation;
+        var c = App.collections;
 
         router.render('home', {
             data: function () {

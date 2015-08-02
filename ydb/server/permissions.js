@@ -18,6 +18,6 @@ var userAccess = function () {
 };
 
 ContentAreas.forEach(function (key) {
-    Collections.presentation[key].allow(userAccess());
+    App.collections[key].allow(userAccess());
 });
 
