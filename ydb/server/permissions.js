@@ -17,7 +17,7 @@ var userAccess = function () {
     };
 };
 
-Object.keys(Collections.presentation).forEach(function (key,i,a) {
+ContentAreas.forEach(function (key) {
     Collections.presentation[key].allow(userAccess());
 });
 

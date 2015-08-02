@@ -34,7 +34,7 @@ Router.route('/', {
             to: "navbar",
             data: function () {
                 return {
-                    navbar: navbar
+                    navbar: c["navbar"].find()
                 }
             }
         });
