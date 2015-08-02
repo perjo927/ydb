@@ -11,15 +11,17 @@ Template.navbar.events({
     }
 });
 
-
-Template.edit_navbar.events({
+/**/
+Template.nav_items.events({
     "click .edit": App.Template.Session.setDesignatedCollectionPropertyFromClickName("editingNavbar", "text")
 });
 
-Template.form_navbar.events({
+/**/
+Template.nav_container.events({
     "keypress input": App.Template.Session.toggleAfterKeyPress("editingNavbar")
 });
 
-Template.form_navbar.helpers({
+Template.nav_container.helpers({
     "affectedProperty": App.Template.Session.getHelper("editingNavbar")
 });
+

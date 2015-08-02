@@ -49,6 +49,14 @@ App.UI.validateForm = function (formFields, formContainer, callback) {
 };
 
 /* */
+App.Template["Jquery"] = {};
+
+App.Template.Jquery.focus = function (that, event, template) {
+    Meteor.setTimeout(function () {
+        $('#'+that._id).focus();
+    },0);
+};
+
 App.Template["Session"] = {};
 
 App.Template.Session.getHelper = function (variable) {
@@ -57,9 +65,10 @@ App.Template.Session.getHelper = function (variable) {
     }
 };
 
-App.Template.Session.setHelper = function (variable, value) {
-    return function () {
+App.Template.Session.setHelper = function (variable, value, callback) {
+    return function (event,template) {
         Session.set(variable, value);
+        callback(this,event,template);
     }
 };
 
@@ -75,7 +84,6 @@ App.Template.Session.setDesignatedCollectionPropertyFromClickName = function (sV
 
 App.Template.Session.toggleAfterKeyPress = function (variable) {
     return function (event) {
-        console.debug(event.keyCode);
         // 13 = Enter, 17 = Ctrl+q, 27 = Esc
         if (event.keyCode == 13 || event.keyCode == 17 || event.keyCode == 27) {
             Session.set(variable, false);

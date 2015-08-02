@@ -18,7 +18,7 @@ template(name="navbar")
                     ul#nav-mobile.side-nav
                         +nav_items_side
                     ul#nav-upper.hide-on-med-and-down.right
-                        +nav_items
+                        +nav_container
 
 //
 template(name="account")
@@ -36,35 +36,35 @@ template(name="nav_items_side")
     +nav_items
 
 //
-template(name="nav_items")
+template(name="nav_container")
     each navbar
-        if currentUser
-            if Session 'editingNavbar'
-                +form_navbar
-            else
-                +edit_navbar
-        else
-            li.cantarell
-                a(href='##{intro.link}')= intro.text
-            li.cantarell
-                a(href='##{work.link}')= work.text
-            li.cantarell
-                a(href='##{team.link}')= team.text
-            li.cantarell
-                a(href='##{contact.link}')= contact.text
+        if Session 'editingNavbar'
+            if currentUser
+                +InputHelper(attribute=affectedProperty document=this collection="navbar"
+                class='form-control' id=this)
 
+            else
+                +nav_items
+        else
+            +nav_items
 
 //
-template(name="edit_navbar")
+template(name="nav_items")
     li.cantarell
-        a.edit(href="#" name="intro")= intro.text
+        a(href='#{{#unless currentUser}}{{intro.link}}{{/unless}}'
+        name="intro" class="{{#if currentUser}}edit{{/if}}")= intro.text
+
     li.cantarell
-        a.edit(href="#" name="work")= work.text
+        a(href='#{{#unless currentUser}}{{work.link}}{{/unless}}'
+        name="work" class="{{#if currentUser}}edit{{/if}}")= work.text
+
     li.cantarell
-        a.edit(href="#" name="team")= team.text
+        a(href='#{{#unless currentUser}}{{team.link}}{{/unless}}'
+        name="team" class="{{#if currentUser}}edit{{/if}}")= team.text
+
     li.cantarell
-        a.edit(href="#" name="contact")= contact.text
+        a(href='#{{#unless currentUser}}{{contact.link}}{{/unless}}'
+        name="contact" class="{{#if currentUser}}edit{{/if}}")= contact.text
 
 //
 template(name="form_navbar")
-    +InputHelper(attribute=affectedProperty document=this collection="navbar" class='form-control')

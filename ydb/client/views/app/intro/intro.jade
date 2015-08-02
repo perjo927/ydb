@@ -4,40 +4,57 @@ template(name="intro")
          .row
             .col.s12
                each intro
-                  if currentUser
-                     if Session 'editingIntroTitle'
-                        +form_intro_title
-                     else
-                        +edit_intro_title
-                  else
-                     +intro_title
-
+                  +intro_top
 
             ul.scrollfire.icons
                each intro
-                  li
-                     .col.s12.m4.l4
-                        .center.promo.cantarell
-                           i.amber-text(class="#{icon}")
-                           .icon-text-area(id="#{_id}")
-                              +markdown
-                                 #{mdText}
+                  +intro_bottom
+
 
 //
-template(name="edit_intro_title")
-   if mdTitle
-      h2.center.intro-text.edit(name="mdTitle")
-         +markdown
-            #{mdTitle}
-
-//
-template(name="form_intro_title")
-   +InputHelper(attribute="mdTitle" document=this collection="intro" class='form-control' placeholder=mdTitle)
+template(name="intro_top")
+   if Session 'editingIntroTitle'
+      if currentUser
+         +InputHelper(attribute="mdTitle" document=this collection="intro"
+         class='form-control' placeholder=mdTitle id=this)
+      else
+         +intro_title
+   else
+      +intro_title
 
 //
 template(name="intro_title")
    if mdTitle
-      h2.center.intro-text
+      h2.center.intro-text(name="mdTitle" class="{{#if currentUser}}edit{{/if}}")
          +markdown
             #{mdTitle}
 
+
+//
+template(name="intro_bottom")
+   li
+      .col.s12.m4.l4
+         .center.promo.cantarell
+            +intro_icon
+            +intro_text_container
+
+
+//
+template(name="intro_text_container")
+   if Session 'editingIntroText'
+      if currentUser
+         +InputHelper(attribute="mdText" document=this collection="intro"
+         class='form-control' placeholder=mdText id=this)
+      else
+         +intro_text
+   else
+      +intro_text
+
+template(name="intro_text")
+   .icon-text-area
+      +markdown
+         #{mdText}
+
+//
+template(name="intro_icon")
+   i.amber-text(class="#{icon}")

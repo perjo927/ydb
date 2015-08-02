@@ -17,11 +17,11 @@ Template.intro.onRendered(function () {
 
 });
 
-Template.edit_intro_title.events({
-    "click .edit": App.Template.Session.setHelper("editingIntroTitle", "mdTitle")
+Template.intro_top.events({
+    "click .edit": App.Template.Session.setHelper("editingIntroTitle", "mdTitle", App.Template.Jquery.focus)
 });
 
-Template.form_intro_title.events({
+Template.intro.events({
     "keypress input": App.Template.Session.toggleAfterKeyPress("editingIntroTitle")
 });
 
