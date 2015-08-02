@@ -31,9 +31,6 @@ template(name="account")
             i.mdi-action-settings
 
 
-//
-template(name="nav_items_side")
-    +nav_items
 
 //
 template(name="nav_container")
@@ -47,6 +44,12 @@ template(name="nav_container")
                 +nav_items
         else
             +nav_items
+
+//
+template(name="nav_items_side")
+    each navbar
+        +nav_items
+
 
 //
 template(name="nav_items")
@@ -65,6 +68,3 @@ template(name="nav_items")
     li.cantarell
         a(href='#{{#unless currentUser}}{{contact.link}}{{/unless}}'
         name="contact" class="{{#if currentUser}}edit{{/if}}")= contact.text
-
-//
-template(name="form_navbar")
