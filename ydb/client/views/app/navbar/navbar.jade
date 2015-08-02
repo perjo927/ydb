@@ -1,3 +1,5 @@
+// TODO: Split up + namespace
+
 template(name="navbar")
     // Navigation
     .navbar-fixed
@@ -19,23 +21,19 @@ template(name="navbar")
                         +nav_items
 
 //
-template(name="edit_navbar")
-    li.cantarell
-        a.edit(href="#" name="intro")= intro.text
-    li.cantarell
-        a.edit(href='##{work.link}' class="#{_id}" title="work")= work.text
-    li.cantarell
-        a.edit(href='##{team.link}' class="#{_id}" title="team")= team.text
-    li.cantarell
-        a.edit(href='##{contact.link}' class="#{_id}" title="contact")= contact.text
+template(name="account")
+    ul#account-dropdown.dropdown-content
+        li
+            a#sign-out Logga ut
+    // Dropdown Trigger
+    li
+        a.dropdown-button(href='#!', data-activates='account-dropdown')
+            i.mdi-action-settings
+
 
 //
-template(name="form_navbar")
-    form#form-navbar.col.s6(title="")
-        .row
-            .input-field.col.s3
-                input#input-navbar.validate(type='text' name="form-navbar" title="{_id}")
-                label(for='form-navbar', data-error='wrong', data-success='right') Nytt namn
+template(name="nav_items_side")
+    +nav_items
 
 //
 template(name="nav_items")
@@ -55,17 +53,18 @@ template(name="nav_items")
             li.cantarell
                 a(href='##{contact.link}')= contact.text
 
-//
-template(name="nav_items_side")
-    +nav_items
 
 //
-template(name="account")
-    ul#account-dropdown.dropdown-content
-        li
-            a#sign-out Logga ut
+template(name="edit_navbar")
+    li.cantarell
+        a.edit(href="#" name="intro")= intro.text
+    li.cantarell
+        a.edit(href="#" name="work")= work.text
+    li.cantarell
+        a.edit(href="#" name="team")= team.text
+    li.cantarell
+        a.edit(href="#" name="contact")= contact.text
 
-    // Dropdown Trigger
-    li
-        a.dropdown-button(href='#!', data-activates='account-dropdown')
-            i.mdi-action-settings
+//
+template(name="form_navbar")
+    +InputHelper(attribute=affectedProperty document=this collection="navbar" class='form-control')

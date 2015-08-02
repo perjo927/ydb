@@ -6,7 +6,7 @@ template(name="work")
                     each work
                         if workTitle
                             i
-                                | {{{ workTitle }}}
+                                | !{ workTitle }
             .row
                 ul.scrollfire.cards.cantarell
                     each work
@@ -18,11 +18,11 @@ template(name="work")
                                             img.activator(src='#{img}')
                                         .card-content
                                             span.card-title.activator.grey-text.text-darken-4
-                                                | {{{ title }}}
+                                                | !{ title }
                                                 i.mdi-navigation-more-vert.right
                                         .card-reveal
                                             span.card-title.grey-text.text-darken-4
-                                                | {{{ title }}}
+                                                | !{ title }
                                                 i.mdi-navigation-close.right
                                             p
-                                                | {{{ text }}}
+                                                | !{ text }

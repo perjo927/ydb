@@ -6,7 +6,7 @@ template(name="team")
                     if teamTitle
                         b
                             i
-                                | {{{ teamTitle }}}
+                                | !{ teamTitle }
 
             .row
                 ul.scrollfire.persons.cantarell
@@ -19,9 +19,9 @@ template(name="team")
                                             img.activator(src='#{img}')
                                         .card-content
                                             span.card-title.activator.grey-text.text-darken-4
-                                                | {{{ name }}}
+                                                | !{ name }
                                                 br
                                                 small
                                                     em
                                                         a.orange-text.text-darken-1(href='#')
-                                                            | {{{ title }}}
+                                                            | !{ title }

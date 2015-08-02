@@ -1,14 +1,12 @@
 
-VM = {
-    "sections": {}
-};
 
 App = {
-    "UI": {},
+    "Http": {},
     "Collection": {},
     "collections": {},
     "Plugin": {},
-    "Http": {}
+    "Template": {},
+    "UI": {}
 };
 
 // Presentation collections to create
@@ -20,3 +18,7 @@ ContentAreas =
         "navbar"
     ];
 
+
+VM = {
+    "sections": {}
+};

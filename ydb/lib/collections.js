@@ -1,12 +1,9 @@
 // Runs in both client and server contexts
 
-
-
 ContentAreas.forEach(function (area) {
     App.collections[area] = new Mongo.Collection(area);
 });
 
-console.log(App.collections);
 
 /* LIB */
 App.Collection.insert = function (collection, document, callback) {

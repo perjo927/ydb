@@ -47,3 +47,30 @@ App.UI.validateForm = function (formFields, formContainer, callback) {
 
     callback(isValid, errorMessage);
 };
+
+/* */
+App.Template["Session"] = {};
+
+App.Template.Session.getHelper = function (variable) {
+  return function () {
+      return Session.get(variable);
+  }
+};
+
+App.Template.Session.setDesignatedCollectionPropertyFromClickName = function (sVariable, attribute) {
+    return function (event) {
+        var name = event.target.name;
+        if (!!attribute) {
+            name = name + "." + attribute;
+        }
+        Session.set(sVariable, name);
+    }
+};
+
+App.Template.Session.toggleAfterKeyPress = function (variable) {
+    return function (event) {
+        if (event.keyCode == 13 || event.keyCode == 27) {
+            Session.set(variable, false);
+        }
+    }
+};

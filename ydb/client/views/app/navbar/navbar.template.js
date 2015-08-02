@@ -12,33 +12,18 @@ Template.navbar.events({
 });
 
 Template.nav_items.helpers({
-    "click #sign-out": function (event,template) {
-        Meteor.logout();
-        Materialize.toast("Du &auml;r nu utloggad.", 5000, 'black');
-    }
+    "editingNavbar": App.Template.Session.getHelper("editingNavbar")
 });
 
 
 Template.edit_navbar.events({
-    "click .edit": function (event,template) {
-        var name = event.target.name;
-        var navbarData = template.data;
-        var id = navbarData._id;
-        var affectedData = navbarData[name];
-
-        console.debug(name, navbarData, id, affectedData.text);
-
-        Session.set("editingNavbar", name);
-
-    }
+    "click .edit": App.Template.Session.setDesignatedCollectionPropertyFromClickName("editingNavbar", "text")
 });
 
 Template.form_navbar.events({
-    "form submit": function (event,template) {
-        event.preventDefault();
-        console.debug(event, template);
+    "keypress input": App.Template.Session.toggleAfterKeyPress("editingNavbar")
+});
 
-        Session.set("editingNavbar", false);
-
-    }
+Template.form_navbar.helpers({
+    "affectedProperty": App.Template.Session.getHelper("editingNavbar")
 });
