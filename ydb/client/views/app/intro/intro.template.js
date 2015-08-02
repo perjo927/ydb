@@ -17,7 +17,7 @@ Template.intro.onRendered(function () {
 
 });
 
-
+// TODO: Refactor the mess
 /**/
 Template.intro.events({
     "keypress input": App.Template.Session.toggleAfterKeyPress("editingIntroTitle")
@@ -36,6 +36,10 @@ Template.intro_text_container.events({
     "keypress input": App.Template.Session.toggleAfterKeyPress("editingIntroText")
 });
 
-//Template.form_navbar.helpers({
-//    "affectedProperty": App.Template.Session.getHelper("editingNavbar")
-//});
+/* */
+Template.intro_icon.events({
+    "click .edit": App.Template.Session.setHelperById("editingIntroIcon", App.Template.Jquery.focus)
+});
+Template.intro_icon_container.events({
+    "keypress input": App.Template.Session.toggleAfterKeyPress("editingIntroIcon")
+});

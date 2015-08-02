@@ -57,4 +57,17 @@ template(name="intro_text")
 
 //
 template(name="intro_icon_container")
-   i.amber-text(class="#{icon}")
+   if Session 'editingIntroIcon' eq=_id
+      if currentUser
+         +InputHelper(attribute="icon" document=this collection="intro"
+         class='form-control' placeholder=icon id=this)
+      else
+         +intro_icon
+   else
+      +intro_icon
+
+template(name="intro_icon")
+   if icon
+      i.amber-text(class="#{icon} {{#if currentUser}}edit{{/if}}" name="icon")
+   else
+      i.amber-text(class="mdi-image-flash-on {{#if currentUser}}edit{{/if}}" name="icon")
