@@ -1,5 +1,5 @@
 var introTitle = {
-    icon: "",
+    //icon: "",
     mdTitle: "Ett mikrobryggeri i __Norrk&ouml;ping__ med inriktning mot __&ouml;l__. Vi brygger, du dricker.",
     creator: "Per"
 };

@@ -67,7 +67,6 @@ template(name="intro_icon_container")
       +intro_icon
 
 template(name="intro_icon")
+   // TODO: What to do if editing an icon and it's wrongly spelled. It can be clicked because nothing will show
    if icon
-      i.amber-text(class="#{icon} {{#if currentUser}}edit{{/if}}" name="icon")
-   else
-      i.amber-text(class="mdi-image-flash-on {{#if currentUser}}edit{{/if}}" name="icon")
+      i.amber-text.intro-icon(class="#{icon} {{#if currentUser}}edit{{/if}}" name="icon")
