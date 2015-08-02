@@ -2,25 +2,25 @@ Template.footer.events({
     "submit form": function (event, template) {
         event.preventDefault();
 
-        var formContainer = App.UI.parseForm(event);
+        var formContainer = AppLib.UI.parseForm(event);
 
         // Validation in case HTML5 validation fails
         var formFields = [
             {
                 name: "fullname",
-                method: App.UI.validateName
+                method: AppLib.UI.validateName
             },
             {
                 name: "email",
-                method: App.UI.validateEmail
+                method: AppLib.UI.validateEmail
             },
             {
                 name: "textmessage",
-                method: App.UI.validateTextArea
+                method: AppLib.UI.validateTextArea
             }
         ];
 
-        App.UI.validateForm(formFields, formContainer, function (isValid, error) {
+        AppLib.UI.validateForm(formFields, formContainer, function (isValid, error) {
             var errorMessage =
                 "F&ouml;ljande formul&auml;r hade felaktig data: "
                 + error

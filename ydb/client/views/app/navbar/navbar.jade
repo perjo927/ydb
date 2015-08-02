@@ -17,17 +17,43 @@ template(name="navbar")
                         +nav_items_side
                     ul#nav-upper.hide-on-med-and-down.right
                         +nav_items
+
+//
+template(name="edit_navbar")
+    li.cantarell
+        a.edit(href="#" name="intro")= intro.text
+    li.cantarell
+        a.edit(href='##{work.link}' class="#{_id}" title="work")= work.text
+    li.cantarell
+        a.edit(href='##{team.link}' class="#{_id}" title="team")= team.text
+    li.cantarell
+        a.edit(href='##{contact.link}' class="#{_id}" title="contact")= contact.text
+
+//
+template(name="form_navbar")
+    form#form-navbar.col.s6(title="")
+        .row
+            .input-field.col.s3
+                input#input-navbar.validate(type='text' name="form-navbar" title="{_id}")
+                label(for='form-navbar', data-error='wrong', data-success='right') Nytt namn
+
 //
 template(name="nav_items")
     each navbar
-        li.cantarell
-            a(href='##{intro.link}' class="#{intro._id}")= intro.text
-        li.cantarell
-            a(href='##{work.link}' class="#{work._id}")= work.text
-        li.cantarell
-            a(href='##{team.link}' class="#{team._id}")= team.text
-        li.cantarell
-            a(href='##{contact.link}' class="#{contact._id}")= contact.text
+        if currentUser
+            if editingNavbar
+                +form_navbar
+            else
+                +edit_navbar
+        else
+            li.cantarell
+                a(href='##{intro.link}')= intro.text
+            li.cantarell
+                a(href='##{work.link}')= work.text
+            li.cantarell
+                a(href='##{team.link}')= team.text
+            li.cantarell
+                a(href='##{contact.link}')= contact.text
 
 //
 template(name="nav_items_side")
