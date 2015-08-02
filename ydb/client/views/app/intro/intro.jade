@@ -35,13 +35,13 @@ template(name="intro_bottom")
    li
       .col.s12.m4.l4
          .center.promo.cantarell
-            +intro_icon
+            +intro_icon_container
             +intro_text_container
 
 
 //
 template(name="intro_text_container")
-   if Session 'editingIntroText'
+   if Session 'editingIntroText' eq=_id
       if currentUser
          +InputHelper(attribute="mdText" document=this collection="intro"
          class='form-control' placeholder=mdText id=this)
@@ -51,10 +51,10 @@ template(name="intro_text_container")
       +intro_text
 
 template(name="intro_text")
-   .icon-text-area
+   .icon-text-area(name="mdText" class="{{#if currentUser}}edit{{/if}}")
       +markdown
          #{mdText}
 
 //
-template(name="intro_icon")
+template(name="intro_icon_container")
    i.amber-text(class="#{icon}")

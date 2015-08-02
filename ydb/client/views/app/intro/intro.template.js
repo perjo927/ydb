@@ -17,12 +17,23 @@ Template.intro.onRendered(function () {
 
 });
 
+
+/**/
+Template.intro.events({
+    "keypress input": App.Template.Session.toggleAfterKeyPress("editingIntroTitle")
+});
+
+/**/
 Template.intro_top.events({
     "click .edit": App.Template.Session.setHelper("editingIntroTitle", "mdTitle", App.Template.Jquery.focus)
 });
 
-Template.intro.events({
-    "keypress input": App.Template.Session.toggleAfterKeyPress("editingIntroTitle")
+/* */
+Template.intro_text.events({
+    "click .edit": App.Template.Session.setHelperById("editingIntroText", App.Template.Jquery.focus)
+});
+Template.intro_text_container.events({
+    "keypress input": App.Template.Session.toggleAfterKeyPress("editingIntroText")
 });
 
 //Template.form_navbar.helpers({

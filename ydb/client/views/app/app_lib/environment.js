@@ -72,6 +72,14 @@ App.Template.Session.setHelper = function (variable, value, callback) {
     }
 };
 
+App.Template.Session.setHelperById = function (variable, callback) {
+    return function (event,template) {
+        var value = template.data._id;
+        Session.set(variable, value);
+        callback(this,event,template);
+    }
+};
+
 App.Template.Session.setDesignatedCollectionPropertyFromClickName = function (sVariable, attribute, callback) {
     return function (event, template) {
         var name = event.target.name;
@@ -85,7 +93,7 @@ App.Template.Session.setDesignatedCollectionPropertyFromClickName = function (sV
 
 App.Template.Session.toggleAfterKeyPress = function (variable) {
     return function (event) {
-        // 13 = Enter, 17 = Ctrl+q, 27 = Esc
+        // 13 = Ctrl+Enter, 10 = Ctrl+Enter, 17 = Ctrl+q, 27 = Esc
         if (event.keyCode == 13 || event.keyCode == 17 || event.keyCode == 27) {
             Session.set(variable, false);
         }
