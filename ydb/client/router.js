@@ -7,7 +7,7 @@ Router.route('/', {
     layoutTemplate: "app",
     waitOn: function() {
         var noParams = false;
-        // TODO: refactor
+
         return CreateSubscriptions({
             "intro": noParams,
             "work": noParams,
@@ -17,20 +17,16 @@ Router.route('/', {
     },
     action: function(){
         var router = this;
-        // TODO: refactor
-        var intro = Collections.presentation["intro"].find();
-        var work = Collections.presentation["work"].find();
-        var team = Collections.presentation["team"].find();
-        var navbar = Collections.presentation["navbar"].find();
+        var c = Collections.presentation;
 
         router.render('home', {
             data: function () {
                 // TODO: refactor
                 return {
-                    intro: intro,
-                    work: work,
-                    team: team,
-                    navbar: navbar
+                    intro: c["intro"].find(),
+                    work: c["work"].find(),
+                    team: c["team"].find(),
+                    navbar: c["navbar"].find()
                 }
             }
         });
@@ -48,7 +44,6 @@ Router.route('/', {
     }
 });
 
-// TODO: Auth
 Router.route('/admin', {
     name: "admin",
     loadingTemplate: "loading",

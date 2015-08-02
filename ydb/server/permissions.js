@@ -1,62 +1,23 @@
-// TODO: Accounts, identification, roles
 
-var access = function (insertRestriction, updateRestriction, removeRestriction) {
-    return {
-        insert: function (user, doc) {
-            return insertRestriction;
-        },
-        update: function(user, doc, fields, modifier) {
-            return updateRestriction;
-        },
-        remove: function(user, doc) {
-            return removeRestriction;
-        }
-    };
-};
-
-var creatorAccess = function (fetch, insertRestriction, updateRestriction, removeRestriction) {
-    var insert = insertRestriction || function (user, doc) {
+var userAccess = function () {
+    var insert = function (user, doc) {
             return !!user;
         };
-    var update = updateRestriction || function(user, doc, fields, modifier) {
-            return doc.creator === user;
+    var update = function(user, doc, fields, modifier) {
+            return !!user;
         };
-    var remove = removeRestriction || function(user, doc) {
-            return doc.creator === user;
+    var remove = function(user, doc) {
+            return !!user;
         };
 
     return {
         insert: insert,
         update: update,
-        remove: remove,
-        fetch: fetch
+        remove: remove
     };
 };
 
-/* */
-//Meteor.users.allow({
-//    insert: function (user, doc) {
-//        return true;
-//    },
-//    update: function(user, doc, fields, modifier) {
-//        return true;
-//    },
-//    remove: function(user, doc) {
-//        return false;
-//    }
-//});
-
-// TODO: Use admin
-Collections.presentation["intro"].allow(access(true, true, true));
-Collections.presentation["work"].allow(access(true, true, true));
-Collections.presentation["team"].allow(access(true, true, true));
-Collections.presentation["navbar"].allow(access(true, true, true));
-
-//Collections.presentation["intro"].allow(creatorAccess(['creator']));
-
-//// Room owner to create features only
-//Collections.presentation["yyy"].allow(creatorAccess(['creator', 'roomId']), function (user, doc) {
-//    return (!!user && doc.roomId === user);
-//});
-
+Object.keys(Collections.presentation).forEach(function (key,i,a) {
+    Collections.presentation[key].allow(userAccess());
+});
 

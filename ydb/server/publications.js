@@ -1,9 +1,12 @@
 //
-var checkUser = function (collection, userId) {
+var checkUser = function (collection, userId, query) {
     check(collection, String);
     check(userId, String);
 
     if (!!userId) {
+        if (!!query) {
+            return Collections.presentation[collection].find(query);
+        }
         return Collections.presentation[collection].find();
     } else {
         return [];
@@ -24,8 +27,3 @@ Meteor.publish("team", function () {
 Meteor.publish("navbar", function () {
     return Collections.presentation["navbar"].find();
 });
-//
-//Meteor.publish("estimationsPerRoom", function (roomId) {
-//    return checkUser("estimations", roomId, this.userId);
-//});
-
