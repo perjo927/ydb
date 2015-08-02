@@ -13,7 +13,7 @@ Template.navbar.events({
 
 /**/
 Template.nav_items.events({
-    "click .edit": App.Template.Session.setDesignatedCollectionPropertyFromClickName("editingNavbar", "text")
+    "click .edit": App.Template.Session.setDesignatedCollectionPropertyFromClickName("editingNavbar", "text", App.Template.Jquery.focus)
 });
 
 /**/

@@ -72,13 +72,14 @@ App.Template.Session.setHelper = function (variable, value, callback) {
     }
 };
 
-App.Template.Session.setDesignatedCollectionPropertyFromClickName = function (sVariable, attribute) {
-    return function (event) {
+App.Template.Session.setDesignatedCollectionPropertyFromClickName = function (sVariable, attribute, callback) {
+    return function (event, template) {
         var name = event.target.name;
         if (!!attribute) {
             name = name + "." + attribute;
         }
         Session.set(sVariable, name);
+        callback(this, event, template);
     }
 };
 
