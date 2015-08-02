@@ -39,7 +39,7 @@ template(name="nav_items_side")
 template(name="nav_items")
     each navbar
         if currentUser
-            if editingNavbar
+            if Session 'editingNavbar'
                 +form_navbar
             else
                 +edit_navbar

@@ -4,10 +4,14 @@ template(name="intro")
          .row
             .col.s12
                each intro
-                  if mdTitle
-                     h2.center.intro-text
-                        +markdown
-                           #{mdTitle}
+                  if currentUser
+                     if Session 'editingIntroTitle'
+                        +form_intro_title
+                     else
+                        +edit_intro_title
+                  else
+                     +intro_title
+
 
             ul.scrollfire.icons
                each intro
@@ -18,3 +22,22 @@ template(name="intro")
                            .icon-text-area(id="#{_id}")
                               +markdown
                                  #{mdText}
+
+//
+template(name="edit_intro_title")
+   if mdTitle
+      h2.center.intro-text.edit(name="mdTitle")
+         +markdown
+            #{mdTitle}
+
+//
+template(name="form_intro_title")
+   +InputHelper(attribute="mdTitle" document=this collection="intro" class='form-control' placeholder=mdTitle)
+
+//
+template(name="intro_title")
+   if mdTitle
+      h2.center.intro-text
+         +markdown
+            #{mdTitle}
+

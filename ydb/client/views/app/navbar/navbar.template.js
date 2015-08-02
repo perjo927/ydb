@@ -11,10 +11,6 @@ Template.navbar.events({
     }
 });
 
-Template.nav_items.helpers({
-    "editingNavbar": App.Template.Session.getHelper("editingNavbar")
-});
-
 
 Template.edit_navbar.events({
     "click .edit": App.Template.Session.setDesignatedCollectionPropertyFromClickName("editingNavbar", "text")

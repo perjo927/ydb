@@ -52,9 +52,15 @@ App.UI.validateForm = function (formFields, formContainer, callback) {
 App.Template["Session"] = {};
 
 App.Template.Session.getHelper = function (variable) {
-  return function () {
-      return Session.get(variable);
-  }
+    return function () {
+        return Session.get(variable);
+    }
+};
+
+App.Template.Session.setHelper = function (variable, value) {
+    return function () {
+        Session.set(variable, value);
+    }
 };
 
 App.Template.Session.setDesignatedCollectionPropertyFromClickName = function (sVariable, attribute) {
@@ -69,7 +75,9 @@ App.Template.Session.setDesignatedCollectionPropertyFromClickName = function (sV
 
 App.Template.Session.toggleAfterKeyPress = function (variable) {
     return function (event) {
-        if (event.keyCode == 13 || event.keyCode == 27) {
+        console.debug(event.keyCode);
+        // 13 = Enter, 17 = Ctrl+q, 27 = Esc
+        if (event.keyCode == 13 || event.keyCode == 17 || event.keyCode == 27) {
             Session.set(variable, false);
         }
     }
