@@ -7,8 +7,7 @@ WorkCreator.createNewWork = function (event) {
 
 WorkCreator.insertNewWork = function (newWork) {
     var collection = App.collections["work"];
-    console.debug(newWork, collection);
     App.Collection.insert(collection, newWork, function (id) {
-        console.log(id);
+        //console.debug(id);
     });
 };

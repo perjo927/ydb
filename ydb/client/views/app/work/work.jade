@@ -14,8 +14,14 @@ template(name="work")
     +work_creator
 //
 template(name="work_action_button")
-    a.btn-floating.btn-large.waves-effect.waves-light.green.right.modal-trigger(href='#work-creator')
-        i.mdi-content-add Add
+    if currentUser
+        a.btn-floating.btn-large.waves-effect.waves-light.green.right.modal-trigger(href='#work-creator')
+            i.mdi-content-add Add
+
+//
+template(name="work_remove_button")
+    if currentUser
+        i.remove-work.mdi-action-highlight-remove.left
 
 //
 template(name="work_top")
@@ -39,6 +45,7 @@ template(name="work_bottom")
     li
         .col.s12.m4.l4
             .card
+                +work_remove_button
                 +work_img_container
 
                 .card-content
