@@ -9,11 +9,11 @@ ContentAreas.forEach(function (area) {
 App.Collection.insert = function (collection, document, callback) {
     collection.insert(document, function (error, id) {
         if (!!error) {
-            //console.error(error);
+            console.error(error);
         } else {
             //console.info(id);
             if (!!callback) {
-                callback();
+                callback(id);
             }
         }
     });

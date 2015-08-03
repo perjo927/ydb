@@ -15,6 +15,7 @@ Template.work.onRendered(function () {
     ];
     Materialize.scrollFire(scrollFireOptions);
 
+    this.$('.modal-trigger').leanModal();
 });
 
 
