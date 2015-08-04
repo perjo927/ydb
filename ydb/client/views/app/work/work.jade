@@ -15,7 +15,7 @@ template(name="work")
 //
 template(name="work_action_button")
     if currentUser
-        a.btn-floating.btn-large.waves-effect.waves-light.green.right.modal-trigger(href='#work-creator')
+        a.btn-floating.btn-large.btn-edit.waves-light.green.right.modal-trigger(href='#work-creator')
             i.mdi-content-add Add
 
 //
@@ -39,7 +39,7 @@ template(name="work_title")
     if workTitle
         i(name="workTitle" class="{{#if currentUser}}edit{{/if}}")
             | !{ workTitle }
-        +work_action_button
+    +work_action_button
 
 template(name="work_bottom")
     li

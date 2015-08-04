@@ -4,6 +4,5 @@ Template.work_creator.events({
 
         var newWork = WorkCreator.createNewWork(event);
         WorkCreator.insertNewWork(newWork);
-
     }
 });

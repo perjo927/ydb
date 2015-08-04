@@ -8,13 +8,12 @@ template(name="work_creator")
                     .row
                         .input-field.col.s6
                             input#work-create-title.validate(value='Titel', type='text' pattern=".{3,20}"
-                            maxlength="30" required title="(3 to 20 characters)" name="title")
+                            maxlength="20" required title="(3 to 20 characters)" name="title")
                             label.active(for='work-create-title') Titel (HTML)
                         .input-field.col.s6
-                            input#work-create-img.validate(value='img/flaska.png', type='text' maxlength="15"
-                            pattern=".{4,100}" required title="(5 to 100 characters)" name="img")
-                            label.active(for='eta') Bild (URL)
-
+                            input#work-create-img.validate(value='img/flaska.png', type='text' maxlength="100"
+                            pattern=".{4,100}" required title="(4 to 100 characters)" name="img")
+                            label.active(for='work-create-img') Bild (URL)
                     .row
                         .input-field.col.s12
                             textarea#work-create-description.materialize-textarea(value="Beskrivning"
