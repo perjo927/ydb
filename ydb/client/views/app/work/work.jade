@@ -39,7 +39,7 @@ template(name="work_title")
     if workTitle
         i(name="workTitle" class="{{#if currentUser}}edit{{/if}}")
             | !{ workTitle }
-    +work_action_button
+        +work_action_button
 
 template(name="work_bottom")
     li

@@ -16,10 +16,10 @@ template(name="work_creator")
                             label.active(for='work-create-img') Bild (URL)
                     .row
                         .input-field.col.s12
-                            textarea#work-create-description.materialize-textarea(value="Beskrivning"
+                            textarea#work-create-description.materialize-textarea.validate(value="Beskrivning"
                             name='text' minlength="10" maxlength="200"
                             required title="(10 to 200 characters)")
-                            label(for='work-create-description') Beskrivning (HTML)
+                            label(for='work-create-description') Beskrivning (HTML) (min. 10 tecken)
                         .col.s12.m12.center
                             br
                             a.modal-action.modal-close.waves-effect.waves-green.btn-flat.left(href="#") Avbryt
