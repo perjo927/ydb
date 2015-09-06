@@ -1,33 +1,43 @@
-// TODO: Sass:a
+//colors
+$color_amber_approx: #ffc107;
 
-.promo i {
-  font-size: 7rem;
-  display: block;
-}
+//fonts
+$font_0: Cantarell;
+$font_1: sans-serif !important;
 
 .intro-text {
   font-weight: 100;
   margin-top: -8%;
   margin-bottom: 4%;
   line-height: 4rem;
-  font-family: 'Cantarell', sans-serif !important;
+  font-family: $font_0, $font_1;
 
   strong {
     font-weight: 100;
-    color: #ffc107;
-    font-family: 'Cantarell', sans-serif !important;
+    color: $color_amber_approx;
+    font-family: $font_0, $font_1;
   }
 }
 
-.icon-text-area {
-  font-family: 'Cantarell', sans-serif !important;
-    strong {
-      font-family: 'Cantarell', sans-serif !important;
-    }
+@media only screen and (max-width: 320px){
+  .intro-text {
+    line-height: 1.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
 }
 
-.intro-icon {
-  //box-shadow: 0 0 200px 0 #ffc107;
-  min-width: 1em;
-  min-height: 1em;
+@media only screen and (min-width: 321px) and (max-width: 414px) {
+  .intro-text {
+    line-height: 2.3rem;
+    font-size: 2rem;
+    margin-bottom: -10%;
+  }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 1000px) {
+  .intro-text {
+    line-height: 3rem;
+    font-size: 3rem;
+  }
 }

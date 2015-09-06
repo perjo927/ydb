@@ -5,17 +5,10 @@
 # but you can also edit it by hand.
 
 meteor-platform
-francocatena:compass
 materialize:materialize
 appcache
 fourseven:scss
 email
-mquandalle:jade
 iron:router
-msavin:mongol
-accounts-base
-markdown
-accounts-password
-yann:input-helper
-msavin:jetsetter
-erasaur:session-helper
+webapp
+audit-argument-checks

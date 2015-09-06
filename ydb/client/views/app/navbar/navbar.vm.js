@@ -1,22 +1,18 @@
-var navbar = {
-    intro: {
+NavbarItems = [
+    {
         link: "intro",
         text: "OM"
     },
-    work: {
+    {
         link: "work",
-        text: "PRODUKTER"
+        text: "&Ouml;L"
     },
-    team: {
+    {
         link: "team",
         text: "TEAM"
     },
-    contact: {
+    {
         link: "contact",
         text: "KONTAKT"
     }
-};
-
-VM.sections["navbar"] = [
-    navbar
 ];
