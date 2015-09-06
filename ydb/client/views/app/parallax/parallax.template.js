@@ -15,5 +15,4 @@ Template.parallax.onRendered(function () {
     ];
     Materialize.scrollFire(scrollFireOptions);
     this.$('.parallax').parallax();
-
 });

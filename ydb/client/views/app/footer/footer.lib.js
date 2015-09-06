@@ -1,9 +1,5 @@
-// TODO : Es6
 
-Footer = {};
-
-
-Footer.onValidationDone = function (isValid, errorMessage, formContainer) {
+Template.footer.onValidationDone = function (isValid, errorMessage, formContainer) {
     var successMessage = "Meddelandet har skickats.";
 
     var email = formContainer["email"],

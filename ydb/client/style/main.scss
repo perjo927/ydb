@@ -1,18 +1,33 @@
 // TODO: SASS
 
+//colors
+$color_black_haze_approx: rgb(247, 247, 247);
+$white: #fff;
+
+//fonts
+$font_0: Cantarell;
+$font_1: sans-serif;
+
 .btn-edit {
   right: -2em;
 }
-
 .cantarell {
-  font-family: 'Cantarell', sans-serif;
+  font-family: $font_0, $font_1;
 }
-
-#intro, #work, #team {padding-top: 4rem;}
-#work, #team{background: rgb(247, 247, 247);}
-
-
-input, textarea {
-  border-bottom: 1px solid #fff;
+#intro {
+  padding-top: 4rem;
 }
-
+#work {
+  padding-top: 1rem;
+  background: $color_black_haze_approx;
+}
+#team {
+  padding-top: 4rem;
+  background: $color_black_haze_approx;
+}
+input {
+  border-bottom: 1px solid $white;
+}
+textarea {
+  border-bottom: 1px solid $white;
+}

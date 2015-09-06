@@ -26,7 +26,7 @@ Template.footer.events({
                 + error
                 + ". Var god f&ouml;rs&ouml;k igen.";
 
-            Footer.onValidationDone(isValid, errorMessage, formContainer);
+            Template.footer.onValidationDone(isValid, errorMessage, formContainer);
         });
     }
 });
