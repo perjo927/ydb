@@ -1,5 +1,5 @@
-//colors
-$yellow:  yellow;
+@import '../../../style/main';
+
 
 #ydb-logo {
   max-height: 44vh;
@@ -8,8 +8,7 @@ $yellow:  yellow;
 .read-more {
   margin-bottom: 0.5em;
   &:hover {
-    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-    text-shadow: 0 0 50px $yellow;
+    text-shadow: 0 0 50px yellow;
     font-weight: 900;
   }
 }

@@ -1,6 +1,3 @@
-// TODO: 404, etc
-
-
 Router.route('/', {
     name: "home",
     loadingTemplate: "loading",

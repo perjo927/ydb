@@ -1,13 +1,22 @@
+@import '../../../style/main';
+
+$img-size: 150px;
+$img-radius: 75px;
+
+#team {
+  padding-top: 4rem;
+  background: $color_black_haze_approx;
+}
+
 .card-avatar {
   .waves-effect {
     text-align: center;
     margin-top: 20px;
   }
   img {
-    height: 150px;
-    width: 150px;
-    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-    border-radius: 75px;
+    height: $img-size;
+    width: $img-size;
+    @include border-radius($img-radius);
   }
   .card-content {
     text-align: center;

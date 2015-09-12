@@ -1,24 +1,29 @@
-//colors
-$color_amber_approx: #ffc107;
+@import '../../../style/main';
 
-//fonts
-$font_0: Cantarell;
-$font_1: sans-serif !important;
+#work {
+  padding-top: 1rem;
+  background: $color_black_haze_approx;
+}
+
+#intro {
+  padding-top: 4rem;
+}
 
 .intro-text {
   font-weight: 100;
   margin-top: -8%;
   margin-bottom: 4%;
   line-height: 4rem;
-  font-family: $font_0, $font_1;
+  font-family: $brand_font, $brand_font_backup;
 
   strong {
     font-weight: 100;
-    color: $color_amber_approx;
-    font-family: $font_0, $font_1;
+    color: $brand_color;
+    font-family: $brand_font, $brand_font_backup;
   }
 }
 
+// MEDIA QUERIES
 @media only screen and (max-width: 320px){
   .intro-text {
     line-height: 1.8rem;
