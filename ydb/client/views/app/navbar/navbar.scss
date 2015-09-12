@@ -17,12 +17,12 @@ nav ul a {
 }
 
 // MEDIA QUERIES
-@media only screen and (min-width: 640px) and (max-width: 1024px) {
+@include tablet{
   .brand-logo{
     font-size: 1.3rem !important;
   }
 }
-@media only screen and (min-width: 1024px) {
+@include desktop{
   .brand-logo{
     font-size: 1.5rem !important;
   }

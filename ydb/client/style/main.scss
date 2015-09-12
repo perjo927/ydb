@@ -1,7 +1,7 @@
 @import '_fonts';
 @import '_colors';
 @import '_mixins';
-@import '_variables';
+@import '_media';
 
 $border: 1px solid white;
 
@@ -12,7 +12,6 @@ $border: 1px solid white;
 .cantarell {
   font-family: $brand_font, $brand_font_backup;
 }
-
 
 
 input {
