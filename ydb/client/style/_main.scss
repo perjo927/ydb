@@ -3,12 +3,8 @@
 @import '{}/client/style/_mixins';
 @import '{}/client/style/_media';
 
-$brand_font: Cantarell;
-$brand_font_backup: sans-serif !important;
-
 
 $border: 1px solid white;
-
 
 .btn-edit {
   right: -2em;
