@@ -2,6 +2,9 @@
 .meteor/local
 .meteor/meteorite
 
+### Folders
+private
+
 ### JetBrains
 .idea
 private
