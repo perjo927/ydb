@@ -1,25 +1,30 @@
-//colors
-$color_amber_approx: #ffc107;
+@import '../../../style/main';
 
-//fonts
-$font_0: Cantarell;
-$font_1: sans-serif !important;
+#work {
+  padding-top: 1rem;
+  background: $color_black_haze_approx;
+}
+
+#intro {
+  padding-top: 4rem;
+}
 
 .intro-text {
   font-weight: 100;
   margin-top: -8%;
   margin-bottom: 4%;
   line-height: 4rem;
-  font-family: $font_0, $font_1;
+  font-family: $brand_font, $brand_font_backup;
 
   strong {
     font-weight: 100;
-    color: $color_amber_approx;
-    font-family: $font_0, $font_1;
+    color: $brand_color;
+    font-family: $brand_font, $brand_font_backup;
   }
 }
 
-@media only screen and (max-width: 320px){
+// MEDIA QUERIES
+@include mini_phone {
   .intro-text {
     line-height: 1.8rem;
     font-size: 1.5rem;
@@ -27,7 +32,7 @@ $font_1: sans-serif !important;
   }
 }
 
-@media only screen and (min-width: 321px) and (max-width: 414px) {
+@include small_phone {
   .intro-text {
     line-height: 2.3rem;
     font-size: 2rem;
@@ -35,7 +40,7 @@ $font_1: sans-serif !important;
   }
 }
 
-@media only screen and (min-width: 415px) and (max-width: 1000px) {
+@include mid_range {
   .intro-text {
     line-height: 3rem;
     font-size: 3rem;

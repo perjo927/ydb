@@ -1,3 +1,6 @@
+@import '../../../style/main';
+
+//
 .brand-logo{
   display: inline-block;
   font-size: 1rem !important;
@@ -10,16 +13,16 @@ nav ul a {
   font-size: 1.2rem;
   display: block;
   font-weight: 400;
-  padding: 0px 15px;
+  padding: 0 15px;
 }
 
-
-@media only screen and (min-width: 640px) and (max-width: 1024px) {
+// MEDIA QUERIES
+@include tablet{
   .brand-logo{
     font-size: 1.3rem !important;
   }
 }
-@media only screen and (min-width: 1024px) {
+@include desktop{
   .brand-logo{
     font-size: 1.5rem !important;
   }
