@@ -1,0 +1,13 @@
+<template name="app">
+    <header>
+        {{> yield 'navbar' }}
+    </header>
+
+    <main>
+        {{> yield }}
+    </main>
+
+    <footer>
+        {{> yield 'footer' }}
+    </footer>
+</template>

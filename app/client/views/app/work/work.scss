@@ -1,0 +1,19 @@
+@import '../../../style/main';
+
+
+.img-product {
+  height: 14em;
+}
+
+// MEDIA QUERIES
+@include desktop_to_mega {
+  .img-product {
+    height: 18em;
+  }
+}
+
+@include mega {
+  .img-product {
+    height: 22em;
+  }
+}

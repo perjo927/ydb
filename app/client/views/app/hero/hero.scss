@@ -1,0 +1,18 @@
+@import '../../../style/main';
+
+
+#ydb-logo {
+  max-height: 44vh;
+  padding: 1em;
+}
+.read-more {
+  margin-bottom: 0.5em;
+  &:hover {
+    text-shadow: 0 0 50px yellow;
+    font-weight: 900;
+  }
+}
+#index-banner {
+  height: 48vh;
+  position: relative;
+}

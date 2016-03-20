@@ -1,0 +1,75 @@
+<template name="footer">
+    <div id="contact" class="page-footer amber scrollspy">
+        <div class="container">
+            <h2 class="center amber footer-header">
+                <b>
+                    <i>KONTAKT</i>
+                </b>
+            </h2>
+
+            {{> footer_form}}
+            <hr>
+            {{> footer_copyright}}
+
+        </div>
+    </div>
+</template>
+
+
+<template name="footer_form">
+    <div class="row">
+        <div class="col s12">
+            <form id="form-email" class="col s12">
+                <div class="row cantarell">
+                    <div class="input-field col s6">
+                        <i class="mdi-action-account-circle prefix black-text"></i>
+                        <input id="fullname" type="text" name="fullname" minlength="3" maxlength="40"
+                               pattern=".{3,40}" required="required" title="(3 till 40 tecken)"
+                               class="validate black-text"/>
+                        <label for="fullname" class="black-text">Namn</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="mdi-communication-email prefix black-text"></i>
+                        <input id="email" type="email" name="email" minlength="5" maxlength="40"
+                               required="required"
+                               title="V&auml;nligen ange en giltig e-post-adress" class="validate black-text"/>
+                        <label for="email" class="black-text">Email</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="mdi-editor-mode-edit prefix black-text"></i>
+                                <textarea id="textmessage" name="textmessage" minlength="10" maxlength="500"
+                                          required="required" title="(20 to 500 characters)"
+                                          class="materialize-textarea black-text"></textarea>
+                        <label for="textmessage" class="black-text">Meddelande (20-500 tecken)</label>
+                    </div>
+                    <div class="col s3 right">
+                        <button type="submit" name="action"
+                                class="btn waves-effect waves-light black btn-submit">
+                            Skicka
+                            <i class="mdi-content-send right white-text"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</template>
+
+
+<template name="footer_copyright">
+    <div class="footer-copyright amber">
+        <div class="container">
+            &copy; 2015 <b>Yellow Danger Brewery.</b> &nbsp;
+
+            <small>
+                Made by
+                <a href="http://www.programmerper.com" target="_blank" class="white-text">
+                    Programmer Per. &nbsp;
+                </a>
+
+                Logo by
+                <a href="http://www.mariajonsson.com" target="_blank" class="white-text"> Maria Jonsson </a>
+            </small>
+        </div>
+    </div>
+</template>
