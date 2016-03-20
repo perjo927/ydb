@@ -1,22 +1,17 @@
 TeamCards = [
     {
-        title: "Grundare",
-        name: "Person 1",
-        img: "img/avatar1.png"
+        title: "",
+        name: "Robert",
+        img: "img/rp.jpg"
     },
     {
-        title: "Bryggare",
-        name: "Person 2",
-        img: "img/avatar2.png"
+        title: "",
+        name: "Hilde",
+        img: "img/hs.jpg"
     },
     {
-        title: "Uppfinnare",
-        name: "Person 3",
-        img: "img/avatar3.png"
-    },
-    {
-        title: "S&auml;ljare",
-        name: "Person 4",
-        img: "img/avatar4.png"
+        title: "",
+        name: "Gustav",
+        img: "img/g.jpg"
     }
 ];

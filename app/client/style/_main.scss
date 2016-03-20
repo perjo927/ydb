@@ -9,14 +9,23 @@ $border: 1px solid white;
 .btn-edit {
   right: -2em;
 }
+
 .cantarell {
   font-family: $brand_font, $brand_font_backup;
 }
 
+.intro-text
+{
+  margin-top: -10%;
+}
 
 input {
   border-bottom: $border;
 }
 textarea {
   border-bottom: $border;
+}
+
+.row .col.s3 {
+  width: inherit;
 }

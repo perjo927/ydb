@@ -7,6 +7,7 @@
 
 #intro {
   padding-top: 4rem;
+  padding-bottom: 3rem;
 }
 
 .intro-text {
@@ -44,5 +45,11 @@
   .intro-text {
     line-height: 3rem;
     font-size: 3rem;
+  }
+}
+
+@media (max-width: 414px) and (min-width: 320px) {
+  .intro-text {
+    margin-top: -35% !important;
   }
 }

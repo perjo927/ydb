@@ -4,7 +4,7 @@ $img-size: 150px;
 $img-radius: 75px;
 
 #team {
-  padding-top: 4rem;
+  padding-top: 1rem;
   background: $color_black_haze_approx;
 }
 
@@ -13,11 +13,17 @@ $img-radius: 75px;
     text-align: center;
     margin-top: 20px;
   }
+
+  .waves-effect:hover {
+    cursor: default;
+  }
+
   img {
     height: $img-size;
     width: $img-size;
     @include border-radius($img-radius);
   }
+
   .card-content {
     text-align: center;
     i {
@@ -31,4 +37,8 @@ $img-radius: 75px;
 
 .card .card-content p {
   margin: 15px 0;
+}
+
+.card .card-title.activator {
+  cursor: default;
 }

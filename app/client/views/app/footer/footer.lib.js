@@ -1,11 +1,11 @@
 
 Template.footer.onValidationDone = function (isValid, errorMessage, formContainer) {
-    var successMessage = "Meddelandet har skickats.";
+    var successMessage = "Tack f&ouml;r ditt meddelande";
 
     var email = formContainer["email"],
         message = formContainer["textmessage"],
         subject = formContainer["fullname"] +
-            " har skickat dig ett meddelande via Yellow Dangers hemsida . ";
+            " har skickat dig ett meddelande via Yellow Danger Brewery's webbplats . ";
 
     var callback = function(err, res) {
         if (!!err) {
